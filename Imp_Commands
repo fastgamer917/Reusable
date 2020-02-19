@@ -4,6 +4,10 @@ driver.execute_script("document.getElementById('g-recaptcha-response').innerHTML
 # other way of above:
 driver.execute_script("document.getElementById('g-recaptcha-response').setAttribute('att_name','att_newvaule');")
 
+#using js file to execute long scrit
+driver.execute_script(open("./hello_world.js").read()) #using absolute path for js file
+driver.execute_script(open("script.js").read()) #if js file is in same project folder of pycharm
+
 ###################################################################################
 # Regex:- extracting number from smspva string {"response":"1","number":"9871234567","id":"25623"}
 
