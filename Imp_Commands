@@ -1,9 +1,17 @@
 # here "driver" is browser object. Arguments are oassed with arguments[0] and result variable.
 driver.execute_script("document.getElementById('g-recaptcha-response').innerHTML=arguments[0]",result);
 
-
 # other way of above:
 driver.execute_script("document.getElementById('g-recaptcha-response').setAttribute('att_name','att_newvaule');")
 
+###################################################################################
+# Regex:- extracting number from smspva string {"response":"1","number":"9871234567","id":"25623"}
 
+#  (?<=er\":\")(.*?)(?=\")  this returns exactly the number. program for this is below
 
+import re
+str = "{\"response\":\"1\",\"number\":\"9871234567\",\"id\":\"25623\"}"
+num=re.findall("(?<=er\":\")(.*?)(?=\")",str)
+print(num[0])
+
+####################################################################################
