@@ -19,3 +19,5 @@ num=re.findall("(?<=er\":\")(.*?)(?=\")",str)
 print(num[0])
 
 ####################################################################################
+split -l 500 -d --additional-suffix=.txt ./Desktop/tocheck.txt ./Desktop/tocheck
+
